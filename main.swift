@@ -24,17 +24,17 @@ class Cafe {
     }
 }
 
- struct Tea: MenuProtocol{   
+struct Tea: MenuProtocol {   
 
-    enum TeaType {
+    enum TeaType: String {
         case black
         case green
         case purple
     }  
 
     private var type: TeaType
-    private var name: String {type.rawValue + " tea"}
-    private var cost: Double
+    var name: String {type.rawValue + " tea"}
+    var cost: Double
      
     init(cost: Double, type: TeaType) {
          self.cost = cost
